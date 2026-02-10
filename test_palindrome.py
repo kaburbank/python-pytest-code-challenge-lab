@@ -23,4 +23,6 @@ from lib.palindrome import longest_palindromic_substring
 )
 def test_longest_palindromic_substring(input_str, expected):
     result = longest_palindromic_substring(input_str)
+    if input_str != "":
+        assert result is not None, f"For input '{input_str}', got None, expected one of {expected}"
     assert result in expected, f"For input '{input_str}', got '{result}', expected one of {expected}"
